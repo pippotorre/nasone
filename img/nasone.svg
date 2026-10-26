@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Nasone">
+  <defs>
+    <linearGradient id="plaque" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a5390"/><stop offset="1" stop-color="#3b2449"/></linearGradient>
+    <linearGradient id="iron" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#26302d"/><stop offset=".3" stop-color="#5c6c66"/><stop offset=".5" stop-color="#46544f"/><stop offset="1" stop-color="#1d2623"/></linearGradient>
+    <linearGradient id="bronze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9a672"/><stop offset="1" stop-color="#8a6a3b"/></linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e4dcee"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#d6cce4"/></linearGradient>
+  </defs>
+  <!-- targa ad arco -->
+  <path d="M40 464V196C40 82 108 22 200 22C292 22 360 82 360 196V464Z" fill="url(#plaque)" stroke="#241530" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M62 452V198C62 100 120 46 200 46C280 46 338 100 338 198V452Z" fill="none" stroke="#c4a8d8" stroke-width="5" stroke-dasharray="2 13" stroke-linecap="round"/>
+  <path d="M76 452V198C76 110 126 62 200 62C274 62 324 110 324 198V452Z" fill="none" stroke="#5e3f74" stroke-width="3"/>
+  <!-- colonnina in ghisa -->
+  <ellipse cx="170" cy="448" rx="76" ry="12" fill="#1d1226" opacity=".55"/>
+  <rect x="106" y="414" width="128" height="32" rx="7" fill="url(#iron)" stroke="#141a18" stroke-width="5"/>
+  <rect x="116" y="402" width="108" height="16" rx="5" fill="url(#bronze)" stroke="#141a18" stroke-width="4"/>
+  <path d="M128 150V404H212V150Z" fill="url(#iron)" stroke="#141a18" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M142 168V396" stroke="#9fb0a9" stroke-width="4" stroke-linecap="round" opacity=".45"/>
+  <rect x="120" y="262" width="100" height="14" rx="5" fill="url(#bronze)" stroke="#141a18" stroke-width="4"/>
+  <rect x="120" y="150" width="100" height="14" rx="5" fill="url(#bronze)" stroke="#141a18" stroke-width="4"/>
+  <!-- cupola e pomello -->
+  <path d="M116 152C116 104 138 88 170 88C202 88 224 104 224 152Z" fill="url(#iron)" stroke="#141a18" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M138 138C140 118 150 106 166 102" fill="none" stroke="#9fb0a9" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+  <rect x="158" y="76" width="24" height="16" rx="4" fill="url(#bronze)" stroke="#141a18" stroke-width="4"/>
+  <circle cx="170" cy="68" r="11" fill="url(#bronze)" stroke="#141a18" stroke-width="4"/>
+  <!-- stemma con SPQR -->
+  <path d="M142 180H198V218Q198 242 170 254Q142 242 142 218Z" fill="url(#bronze)" stroke="#141a18" stroke-width="4" stroke-linejoin="round"/>
+  <text x="170" y="222" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="14" fill="#2a1d0b">SPQR</text>
+  <!-- il «naso»: beccuccio curvo -->
+  <path d="M212 304H244Q274 304 274 334V350" fill="none" stroke="#141a18" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M212 304H244Q274 304 274 334V350" fill="none" stroke="#56655f" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M214 299H244Q268 299 269 322" fill="none" stroke="#9fb0a9" stroke-width="3.5" stroke-linecap="round" opacity=".6"/>
+  <ellipse cx="274" cy="356" rx="9" ry="5" fill="#141a18"/>
+  <!-- getto principale -->
+  <path d="M269 358C268 392 267 420 265 442L283 442C281 420 280 392 279 358Z" fill="url(#water)" stroke="#b6a6cc" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M273 364C272.5 390 272 414 271 436" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+  <!-- forellino sul dorso del naso e il suo zampillo verso l'alto -->
+  <ellipse cx="256" cy="297" rx="5.5" ry="3" fill="#141a18"/>
+  <path d="M256 295C256 264 270 246 292 238" fill="none" stroke="#b6a6cc" stroke-width="9" stroke-linecap="round"/>
+  <path d="M256 295C256 264 270 246 292 238" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#fff" stroke="#b6a6cc" stroke-width="2"><circle cx="304" cy="232" r="4.5"/><circle cx="314" cy="244" r="3.5"/><circle cx="298" cy="222" r="3"/></g>
+  <!-- schizzi alla base -->
+  <path d="M232 448Q256 434 266 442M284 442Q302 434 322 448" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#fff" stroke="#b6a6cc" stroke-width="2"><circle cx="246" cy="426" r="4"/><circle cx="306" cy="424" r="4"/><circle cx="324" cy="436" r="3"/></g>
+</svg>
