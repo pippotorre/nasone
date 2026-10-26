@@ -15,7 +15,7 @@ Web app (installabile come app su Android e iPhone) che trova il **nasone** — 
 ## Pubblicazione
 Sito statico: basta copiare i file in una cartella raggiungibile in **HTTPS** (la posizione del telefono funziona solo su HTTPS), per esempio `https://www.entratadisicurezza.com/nasone/`. Non servono PHP, database o chiavi. Su Tophost si caricano solo `index.html`, `storia.html`, `privacy.html`, `manifest.webmanifest`, `sw.js`, `css/`, `js/`, `img/`, `vendor/`.
 Per aggiornare dopo una modifica cambia il numero `?v=` in `index.html` e in `sw.js` e `VERSION` in `sw.js`, altrimenti i telefoni continuano a usare la copia vecchia.
-Prima di pubblicare sostituisci `INDIRIZZO-EMAIL` in `privacy.html` e in `store/scheda-play-store.md`.
+
 
 ## Struttura
 - `index.html`, `css/app.css`, `js/app.js` (interfaccia e flusso), `js/geo.js` (funzioni pure: distanze, query, istruzioni), `js/i18n.js` (traduzioni IT/EN/FR/ES/DE), `storia.html`, `privacy.html`.
@@ -23,7 +23,7 @@ Prima di pubblicare sostituisci `INDIRIZZO-EMAIL` in `privacy.html` e in `store/
 - `manifest.webmanifest`, `sw.js`, `img/` — installazione come app e icone.
 - `test/` — prove senza dipendenze: `node test/geo.test.js && node test/i18n.test.js`.
 - `art/` — illustrazione del nasone (`nasone.svg`) e script che genera icone e grafica dello store (`python3 art/build.py`, richiede Playwright).
-- `store/`, `docs/` — materiali e guida per Google Play ([docs/ANDROID.md](docs/ANDROID.md)).
+- `store/`, `docs/`, `tools/` — materiali, guida completa per Google Play ([docs/ANDROID.md](docs/ANDROID.md)) e controllo del sito (`bash tools/verifica-sito.sh URL`).
 
 ## Dati e servizi
 I punti d'acqua potabile sono quelli di OpenStreetMap (`amenity=drinking_water`, anche come aree, più le `amenity=fountain` con `drinking_water=yes`). L'app è completa quanto lo è la mappatura: se manca una fontanella, si aggiunge su openstreetmap.org e compare in app senza altre modifiche.
