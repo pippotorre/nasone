@@ -4,7 +4,7 @@ ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 svg=open(ROOT+'/art/nasone.svg').read()
 BG='#efe6d2'
 def fig(h): 
-    w=h*400/480
+    w=h*280/430
     return svg.replace('<svg ',f'<svg width="{w:.1f}" height="{h:.1f}" style="display:block" ')
 def tile(size, h, radius=0, bg=BG):
     return f'<style>html,body{{margin:0;background:transparent}}.t{{width:{size}px;height:{size}px;background:{bg};border-radius:{radius}px;display:grid;place-items:center}}</style><div class="t">{fig(h)}</div>'
@@ -20,7 +20,7 @@ async def main():
         await shot(b,tile(512,300,0),512,512,I+'icon-maskable-512.png',False)
         await shot(b,tile(180,146,0),180,180,I+'apple-touch-icon.png',False)
         await shot(b,tile(512,410,0),512,512,S+'play-icon-512.png',False)
-        feat=f'''<style>html,body{{margin:0}}.f{{width:1024px;height:500px;background:linear-gradient(120deg,#efe6d2 0%,#e6dcec 55%,#cdb9de 100%);display:flex;align-items:center;gap:56px;padding:0 90px;box-sizing:border-box;font-family:Georgia,'Times New Roman',serif;color:#3b2449}}
+        feat=f'''<style>html,body{{margin:0}}.f{{width:1024px;height:500px;background:linear-gradient(120deg,#f4ecda 0%,#efe6d2 55%,#e2d4b6 100%);display:flex;align-items:center;gap:56px;padding:0 90px;box-sizing:border-box;font-family:Georgia,'Times New Roman',serif;color:#3b2449}}
         h1{{font-size:112px;margin:0;letter-spacing:-2px;line-height:1}}p{{font-size:34px;margin:14px 0 0;color:#5a3a6e;font-family:system-ui,sans-serif;line-height:1.25}}</style>
         <div class="f">{fig(420)}<div><h1>Nasone</h1><p>Trova la fontanella<br>di Roma più vicina</p></div></div>'''
         await shot(b,feat,1024,500,S+'feature-graphic-1024x500.png',False)
