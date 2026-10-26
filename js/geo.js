@@ -42,7 +42,7 @@
     const r = Math.round(radius + 150);        // margine per compensare l'arrotondamento del centro
     const at = '(around:' + r + ',' + roundCoord(lat) + ',' + roundCoord(lon) + ')';
     // tutti i punti d'acqua potabile (nodi, aree e relazioni) + fontane marcate come potabili: a Roma i nasoni sono segnati così
-    return '[out:json][timeout:25];(nwr["amenity"="drinking_water"]' + at + ';nwr["amenity"="fountain"]["drinking_water"="yes"]' + at + ';);out center body;';
+    return '[out:json][timeout:25];(nwr["amenity"="drinking_water"]' + at + ';nwr["amenity"="fountain"]["drinking_water"="yes"]' + at + ';nwr["man_made"="water_tap"]["drinking_water"="yes"]' + at + ';);out center body;';
   }
 
   /** Estrae dalla risposta di Overpass solo nodi con coordinate valide. */
