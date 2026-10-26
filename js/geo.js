@@ -1,4 +1,4 @@
-/* Turet — funzioni pure (distanze, query Overpass, istruzioni di percorso in italiano).
+/* Nasone — funzioni pure (distanze, query Overpass, istruzioni di percorso in italiano).
  * Nessuna dipendenza dal browser: si provano con `node test/geo.test.js`. */
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) module.exports = factory();

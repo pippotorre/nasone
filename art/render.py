@@ -8,6 +8,6 @@ async def main():
     async with async_playwright() as p:
         b=await p.chromium.launch()
         html=lambda inner,bg='transparent': f'<style>html,body{{margin:0;background:{bg}}}svg{{display:block}}</style>{inner}'
-        await shot(b, html(svg.replace('<svg ','<svg width="800" height="960" ')),800,960,'/tmp/toret_big.png')
+        await shot(b, html(svg.replace('<svg ','<svg width="800" height="960" ')),800,960,'/tmp/nasone_big.png')
         await b.close()
 asyncio.run(main())
