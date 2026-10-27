@@ -1,8 +1,8 @@
 /* Nasone — service worker: salva il «guscio» dell'app (pagina, stili, script, Leaflet, icone) per aprirla anche con poca rete.
  * Mappe, dati dei nasoni e percorsi arrivano sempre da internet e non vengono mai salvati qui (i dati dei nasoni li ricorda l'app in localStorage).
  * Per forzare l'aggiornamento delle copie salvate cambia VERSION. */
-const VERSION = 'nasone-v4';
-const SHELL = ['./', 'index.html', 'css/app.css?v=4', 'js/i18n.js?v=4', 'js/geo.js?v=4', 'js/app.js?v=4', 'vendor/leaflet/leaflet.js', 'vendor/leaflet/leaflet.css', 'img/icon-192.png', 'img/nasone.svg', 'manifest.webmanifest'];
+const VERSION = 'nasone-v5';
+const SHELL = ['./', 'index.html', 'css/app.css?v=5', 'js/i18n.js?v=5', 'js/geo.js?v=5', 'js/app.js?v=5', 'vendor/leaflet/leaflet.js', 'vendor/leaflet/leaflet.css', 'img/icon-192.png', 'img/nasone.svg', 'manifest.webmanifest'];
 
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => {
