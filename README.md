@@ -34,6 +34,11 @@ I punti d'acqua potabile sono quelli di OpenStreetMap (`amenity=drinking_water`,
 | Overpass (overpass-api.de, overpass.private.coffee, overpass.kumi.systems, overpass.openstreetmap.fr) | posizione delle fontanelle | Gratuito, uso corretto. L'app li interroga in parallelo (secondo tentativo su 502/429) e usa il primo che risponde; invia un punto arrotondato a ~100 m. |
 | routing.openstreetmap.de (profilo a piedi) | percorso | Gratuito, senza garanzie. In caso di errore l'app ripiega sulla linea d'aria. |
 
+## Affidabilità dei dati
+- L'app scarica **una volta** le fontanelle di un'area di circa 6,5 km attorno a te (a «tessere» di ~2 km) e le tiene nel telefono: la copia è considerata fresca per 3 giorni, e fino a 60 giorni viene usata se i server non rispondono. «Cerca più lontano» filtra in locale, senza altre richieste.
+- I server Overpass vengono interrogati a scaglioni (il primo subito, gli altri solo se tardano), non tutti insieme.
+- **Elenco di riserva (facoltativo):** `bash tools/scarica-dati.sh` salva `data/fontane.json`; caricalo sul sito accanto a `index.html`. L'app lo usa solo se nessun server risponde e non c'è una copia nel telefono.
+
 ## Privacy
 La posizione non viene salvata né inviata a un server del progetto: resta nel browser. Ai servizi esterni vanno solo un punto arrotondato (ricerca) e le due coordinate del tragitto (percorso). Nel browser si salvano la lingua e la copia degli ultimi risultati (localStorage, chiavi `nasone.*`).
 

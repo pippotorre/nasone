@@ -37,12 +37,17 @@
   /** Arrotonda a 3 decimali (~100 m): la posizione esatta non viene inviata al servizio dei dati. */
   const roundCoord = (v) => Math.round(v * 1000) / 1000;
 
-  /** Query Overpass: i punti d'acqua potabile (i nasoni di Roma) attorno a un punto. */
-  function overpassQuery(lat, lon, radius) {
-    const r = Math.round(radius + 150);        // margine per compensare l'arrotondamento del centro
+  /** Query Overpass: i punti d'acqua potabile attorno a un punto. kind 'node' (default, veloce) oppure 'area' (aree e relazioni, più lenta). */
+  function overpassQuery(lat, lon, r, kind) {
     const at = '(around:' + r + ',' + roundCoord(lat) + ',' + roundCoord(lon) + ')';
-    // tutti i punti d'acqua potabile (nodi, aree e relazioni) + fontane marcate come potabili: a Roma i nasoni sono segnati così
-    return '[out:json][timeout:25];(nwr["amenity"="drinking_water"]' + at + ';nwr["amenity"="fountain"]["drinking_water"="yes"]' + at + ';nwr["man_made"="water_tap"]["drinking_water"="yes"]' + at + ';);out center body;';
+    const types = kind === 'area' ? ['way', 'relation'] : ['node'];
+    const parts = [];
+    for (const t of types) {
+      parts.push(t + '["amenity"="drinking_water"]' + at);
+      parts.push(t + '["amenity"="fountain"]["drinking_water"="yes"]' + at);
+      if (t === 'node') parts.push('node["man_made"="water_tap"]["drinking_water"="yes"]' + at);
+    }
+    return '[out:json][timeout:25];(' + parts.join(';') + ';);out center;';
   }
 
   /** Estrae dalla risposta di Overpass solo nodi con coordinate valide. */
