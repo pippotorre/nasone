@@ -7,7 +7,7 @@ Diario del progetto: decisioni prese, verifiche, domande aperte. Si aggiorna a o
 Web app installabile (PWA, anche su Google Play come app impacchettata) che trova il **nasone** più vicino,
 la fontanella romana in ghisa, e disegna il percorso a piedi. Ha una pagina di storia e curiosità.
 È la sorella di [Turet](https://github.com/pippotorre/turet): stesso motore, altra città e altra grafica.
-Indirizzo: **https://www.entratadisicurezza.com/nasone/** (Tophost).
+Indirizzo: **https://nasone.entratadisicurezza.com/** (GitHub Pages, dominio personalizzato).
 
 ## Decisioni prese
 
@@ -41,6 +41,7 @@ Indirizzo: **https://www.entratadisicurezza.com/nasone/** (Tophost).
 
 ## Punti aperti
 
-- [ ] Caricare su Tophost `index.html`, `storia.html`, `privacy.html`, `sw.js`, `js/app.js` aggiornati.
 - [ ] Aggiornare il modulo «Sicurezza dei dati» nella Play Console.
 - [ ] Dopo qualche giorno, controllare su GoatCounter che arrivino visite ed eventi.
+
+| 14/11/2026 | Spostamento su GitHub Pages (nasone.entratadisicurezza.com). Dati a tessere (`data/t/`) rigenerati ogni settimana da un'azione di GitHub; il service worker ora prende prima la rete. Il vecchio indirizzo su Tophost mostra una pagina di trasferimento con redirect dopo 4 secondi. |

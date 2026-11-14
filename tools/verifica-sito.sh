@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Controlla che il sito sia online e pronto per l'app Android.
-# Uso:  bash tools/verifica-sito.sh https://www.entratadisicurezza.com/nasone/ [com.pacchetto.app]
+# Uso:  bash tools/verifica-sito.sh https://nasone.entratadisicurezza.com/ [com.pacchetto.app]
 BASE="${1:-}"; PKG="${2:-}"
-if [ -z "$BASE" ]; then echo "Uso: bash tools/verifica-sito.sh https://www.entratadisicurezza.com/nasone/ [pacchetto]"; exit 2; fi
+if [ -z "$BASE" ]; then echo "Uso: bash tools/verifica-sito.sh https://nasone.entratadisicurezza.com/ [pacchetto]"; exit 2; fi
 BASE="${BASE%/}/"
 ORIGIN="$(echo "$BASE" | sed -E 's#^(https?://[^/]+)/.*#\1#')"
 KO=0

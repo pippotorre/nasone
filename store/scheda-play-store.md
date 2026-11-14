@@ -1,8 +1,8 @@
 # Scheda Google Play — Nasone
 
 Categoria: **Mappe e navigazione** (alternativa: Viaggi e info locali) · Gratuita · Senza annunci
-Email di contatto pubblica: info@entratadisicurezza.com · Sito: https://www.entratadisicurezza.com/nasone/
-Informativa privacy (URL): https://www.entratadisicurezza.com/nasone/privacy.html
+Email di contatto pubblica: info@entratadisicurezza.com · Sito: https://nasone.entratadisicurezza.com/
+Informativa privacy (URL): https://nasone.entratadisicurezza.com/privacy.html
 Grafica: icona `play-icon-512.png` (512×512), immagine in evidenza `feature-graphic-1024x500.png`.
 Screenshot: servono almeno 2 immagini verticali dal telefono (vedi docs/ANDROID.md, passo 7).
 
